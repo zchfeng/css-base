@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .box{
+        width: 400px;
+        height: 400px;
+        border: solid 1px #000;
+        float: left;
+        position: relative;
+    }
+    .box1 .top{
+        width: 100%;
+        height: 100px;
+        background: red;
+    }
+    .box1 .bottom{
+        width: 100%;
+        height: 100px;
+        background: blue;
+        position: absolute;
+        bottom: 0;
+    }
+    .box1 .middle{
+        background: green;
+    }
+    .box2 {
+        display: flex;
+    }
+    .box2 .left{
+        flex: 1;
+        height: 100%;
+        background: green;
+    }
+    .box2 .right{
+        height: 100%;
+    }
+    .box3 .left{
+        width: 100px;
+        height: 100%;
+        background: green;
+        float: left;
+    }
+    .box3 .right{
+        float: right;
+        width: 100px;
+        height: 100%;
+        background: yellow;
+    }
+    .box3 .middle{
+        float: left;
+        max-width: calc( 100% - 200px );
+        background: red;
+    }
+    .box4 .top{
+        width: 100%;
+        height: 100px;
+        background: red;
+    }
+    .box4 .left{
+        float: left;
+        width: 100px;
+        height: calc(100% - 100px);
+        background: green;
+    }
+</style>
+</head>
+<body>
+    <div class="box1 box">
+        <div class="top">上中下布局:上下固定高度，中自适应高度</div>
+        <div class="middle"></div>
+        <div class="bottom"></div>
+    </div>
+    <div class="box2 box">
+        <div class="left"></div>
+        <div class="right">两栏布局：左边固定宽度，右边自适应宽带</div>
+    </div>
+    <div class="box3 box">
+        <div class="left"></div>
+        <div class="middle">三栏布局:左右固定宽度，中自适应宽度</div>
+        <div class="right"></div>
+    </div>
+    <div class="box4 box">
+        <div class="top">布局4</div>
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>
