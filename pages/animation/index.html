@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D和3D</title>
+    <style>
+        .box{
+            background: red;
+            width: 100px;
+            height: 100px;
+            margin-left:30px
+        }
+        .transform{
+            transform: translate(100%)
+        }
+        .scale{
+            transform: scale(2,1);
+        }
+        .rotate{
+            transform: rotateZ(60deg);
+            /* backface-visibility:hidden */
+        }
+        .skew{
+            transform: skew(30deg);
+        }
+        .perspective{
+            perspective:500px;
+            transform-style:preserve-3d
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label>平移（transform）</label>
+        <div class="box transform">平移</div>
+    </div>
+    <div>
+        <label>缩放（scale）</label>
+        <div class="box scale">缩放</div>
+    </div>
+    <div>
+        <label>旋转（rotate）</label>
+        <div class="box rotate">旋转</div>
+    </div>
+    <div>
+        <label>倾斜（skew）</label>
+        <div class="box skew">倾斜</div>
+    </div>
+    <div>
+        <label>3D</label>
+        <div class="box perspective">3D</div>
+    </div>
+</body>
+</html>
